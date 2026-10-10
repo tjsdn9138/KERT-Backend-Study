@@ -1,20 +1,35 @@
 # KERT 웹 백엔드 스터디 - 1주차
- 
-<!-- 이 파일 속 내용을 직접 채워주세요! 주석(이 줄 같은 회색 글)은 다 채운 뒤 지워도 됩니다. -->
- 
+
 ## 실행 방법
- 
-<!-- 이 레포를 처음 clone 한 사람이 그대로 따라 하면 서버가 뜨도록 순서대로 적으세요. -->
- 
+
+1. 레포를 clone 하고 `week01` 폴더로 이동합니다.
+   ```
+   git clone https://github.com/tjsdn9138/KERT-Backend-Study.git
+   cd KERT-Backend-Study/week01
+   ```
+2. 패키지를 설치합니다. (Node.js 필요)
+   ```
+   npm install
+   ```
+3. 개발 서버를 실행합니다. (nodemon 으로 파일 수정 시 자동 재시작)
+   ```
+   npm run dev
+   ```
+4. 브라우저에서 `http://localhost:3000` 에 접속합니다.
+
 ## 구현한 라우트
- 
-<!-- 만든 라우트와 각각 무엇을 보여주는지 적으세요. -->
- 
+
+| 경로 | 설명 |
+| --- | --- |
+| `/` | `Hello Express!` 제목을 보여줍니다. |
+| `/about` | 자기소개(`나는 누구`, KERT 웹 백엔드 스터디 1기)를 보여줍니다. |
+| `/photo` | `public/sunglasscat.png` 이미지를 보여줍니다. (`public` 폴더는 `express.static` 으로 공개) |
+| `/time` | 접속한 시각을 한국 시간(Asia/Seoul)으로 보여줍니다. |
+
 ## 연습 문제
- 
-<!-- node practice.js 실행 결과의 마지막 줄을 적으세요. -->
- 
-## (도전) /time 이 새로고침할 때마다 바뀌는 이유
- 
-<!-- (선택) 2~3줄로 적어보세요. -->
- 
+
+`node practice.js` 실행 결과의 마지막 줄:
+
+```
+10 / 10 통과
+```

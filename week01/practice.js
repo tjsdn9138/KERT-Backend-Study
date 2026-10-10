@@ -1,15 +1,43 @@
 // ===== 아래 4개의 함수를 구현해 주세요. =====
 
 function findPost(posts, id) {
+  return posts.find(p => p.id === id) ?? null;
 }
 
 function searchPosts(posts, keyword) {
+  const result = [];
+
+  posts.forEach(post => {
+    if (post.title.includes(keyword)) result.push(post);
+  });
+
+  return result;
 }
 
 function addPost(posts, title, author) {
+  const id = posts.length ?
+    Math.max(...posts.map(p => p.id)) + 1 : 1;
+  
+  const newPost = { id, title, author };
+  posts.push(newPost);
+
+  return newPost;
 }
 
 function renderPostList(posts) {
+  let result = "";
+
+  if (posts.length === 0) return "<p>글이 없습니다</p>";
+
+  result += '<ul>'
+  posts.forEach(post => {
+    result += "<li>";
+    result += `[${post.id}] ${post.title} (${post.author})`;
+    result += "</li>";
+  });
+  result += '</ul>'
+
+  return result;
 }
 
 // ===== 이 아래는 채점 코드입니다. 수정하지 마세요 =====
