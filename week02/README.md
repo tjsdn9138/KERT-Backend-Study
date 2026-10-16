@@ -1,19 +1,35 @@
 # KERT 웹 백엔드 스터디 - 2주차
 
-<!-- 이 파일 속 내용을 직접 채워주세요! 주석(이 줄 같은 회색 글)은 다 채운 뒤 지워도 됩니다. -->
-
 ## 실행 방법
 
-<!-- 이 레포를 처음 clone 한 사람이 그대로 따라 하면 서버가 뜨도록 순서대로 적으세요. -->
+```bash
+git clone <내 레포 주소>
+cd KERT-Backend-Study/week02
+git switch Feat/ejs-board
+npm install
+node app.js
+```
+
+브라우저에서 http://localhost:3000/posts 에 접속합니다.
+점검은 서버를 켠 상태에서 터미널을 하나 더 열고 `node check.js` 를 실행합니다.
 
 ## 구현한 라우트
 
-<!-- 메서드 · 주소 · 하는 일을 적으세요. 예: GET /posts : 글 목록 -->
+| 메서드 | 주소 | 하는 일 |
+|---|---|---|
+| GET | `/posts` | 글 목록 (`list.ejs`) |
+| GET | `/posts/new` | 글쓰기 폼 (`new.ejs`) |
+| GET | `/posts/:id` | 글 상세 (`detail.ejs`), 없는 글은 404 |
+| POST | `/posts` | 폼 데이터로 글 저장 후 새 글 상세로 redirect |
+| POST | `/posts/:id/delete` | 글 삭제 후 `/posts` 로 redirect |
 
 ## 점검 결과
 
-<!-- 서버를 켠 상태에서 node check.js 를 실행한 결과의 마지막 두 줄을 적으세요. -->
+```
+필수 14 / 14 통과
+도전 0 / 3 통과
+```
 
 ## (도전) 구현한 것
 
-<!-- (선택) 검색 · 빈 제목 막기 · 404 페이지 중 구현한 것을 적으세요. -->
+구현한 도전 과제 없음
